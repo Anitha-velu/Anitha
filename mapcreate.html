@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const myMap = new Map();
+// Adding key-value pairs to the Map
+myMap.set('key1', 'value1');
+myMap.set(2, 'value2');
+myMap.set({ key: 'objectKey' }, 'value3');
+console.log(myMap.get('key1'));
+console.log(myMap.get(2)); // Output: 'value2'
+
+// Deleting an entry from the Map
+myMap.delete('key1');
+console.log(myMap.get('key1')); // Output: undefined (key1 was deleted)
+console.log(myMap.has('key1'));
+// Iterating through the Map using forEach
+myMap.forEach((value, key) => {
+  console.log(`${key}: ${value}`);
+});
+
+// Iterating through the Map using for...of
+for (const [key, value] of myMap) {
+  console.log(`${key}: ${value}`);
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p>This is Example for suffeled an array in JavaScript</p>
+   <script>
+    function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+// Example usage:
+const originalArray = [1, 2, 3, 4, 5];
+const shuffledResult = shuffleArray(originalArray.slice()); // Create a copy to preserve the original
+console.log(shuffledResult); // Output: Shuffled array
+
+   </script>
+  
+</body>
+</html>

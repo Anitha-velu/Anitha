@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>This is Example constructor in JavaScript</p>
+    <script>
+       // Constructor function for creating Car objects
+function Car(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+
+    this.displayInfo = function() {
+        console.log(`This car is a ${this.year} ${this.make} ${this.model}.`);
+    };
+}
+
+// Creating instances using the 'new' keyword
+let myCar = new Car('Toyota', 'Corolla', 2022);
+let anotherCar = new Car('Tesla', 'Model S', 2023);
+
+// Accessing properties and calling method
+console.log(myCar.make);
+console.log(anotherCar.model);
+myCar.displayInfo(); 
+anotherCar.displayInfo(); 
+    </script>
+</body>
+</html>

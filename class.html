@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p>This is Example for classes in JavaScript</p>
+   <script>
+    class Animal {
+    constructor(name, species) {
+        this.name = name;
+        this.species = species;
+    }
+
+    // Method defined within the class
+    makeSound() {
+        console.log('Some generic sound');
+    }
+}
+
+// Creating an instance of the class
+let myAnimal = new Animal('Leo', 'Lion');
+console.log(myAnimal.name); // Output: Leo
+console.log(myAnimal.species); // Output: Lion
+myAnimal.makeSound(); // Output: Some generic sound
+
+   </script> 
+</body>
+</html>

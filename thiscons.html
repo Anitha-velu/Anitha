@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>This is Example for This keyword in JavaScript</p>
+   <script>
+   function Car(make, model) {
+        this.make = make;
+        this.model = model;
+        this.displayInfo = function() {
+            console.log(`This car is a ${this.make} ${this.model}.`);
+        };
+    }
+    
+    let myCar = new Car('Toyota', 'Corolla');
+    myCar.displayInfo(); // Output: This car is a Toyota Corolla.
+    </script>
+</body>
+</html>

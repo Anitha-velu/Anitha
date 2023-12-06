@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>This is Example for setInterval in JavaScript</p>
+    <script>
+        function displayTime() {
+  let currentTime = new Date();
+  console.log(`Current time: ${currentTime.toLocaleTimeString()}`);
+}
+
+// Execute the displayTime function every 2 seconds (2000 milliseconds)
+let intervalId = setInterval(displayTime, 2000);
+
+    </script>
+</body>
+</html>

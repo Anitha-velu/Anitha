@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myPromise = new Promise((resolve, reject) => {
+  // Simulating an asynchronous operation
+  setTimeout(() => {
+    let success = true; // Change to false to simulate rejection
+
+    if (success) {
+      resolve('Operation completed successfully.');
+    } else {
+      reject('Operation failed.');
+    }
+  }, 2000); // Resolves after 2 seconds
+});
+
+myPromise.then((result) => {
+  console.log(result); // Output if resolved
+}).catch((error) => {
+  console.error(error); // Output if rejected
+});
+
+    </script>
+</body>
+</html>

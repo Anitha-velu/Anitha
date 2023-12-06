@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function fetchData() {
+  // Simulating an asynchronous operation (e.g., fetching data from an API)
+  let response = await fetch('https://api.example.com/data');
+  
+  if (response.ok) {
+    let data = await response.json();
+    return data;
+  } else {
+    throw new Error('Failed to fetch data');
+  }
+}
+
+// Using the async function fetchData()
+fetchData()
+  .then(data => {
+    console.log(data); // Process the fetched data
+  })
+  .catch(error => {
+    console.error(error); // Handle errors
+  });
+
+    </script>
+</body>
+</html>

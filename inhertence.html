@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class basclass{
+            constructor(name,age){
+                this.name=name;
+                this.age=25;
+            }
+            login(){
+                console.log("Hi",this.name);
+                console.log("your login is completed");
+            }
+            logout(){
+                console.log("your logout is completed");
+            }
+            }
+        
+        let nameobj=new basclass('Anitha',25);
+        let namesobj=new basclass('velu',40);
+        nameobj.login()
+        namesobj.login()
+        class derivclass extends basclass{
+            message(){
+                console.log('In this is paid version of login');
+            }
+           
+        }
+        let paiduser1=new derivclass("Magesh",35);
+        paiduser1.login()
+
+
+    </script>
+</body>
+</html>

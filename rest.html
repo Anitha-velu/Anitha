@@ -7,12 +7,13 @@
 </head>
 <body>
     <script>
-        const fruits = ['Apple', 'Orange', 'Banana', 'Grapes'];
+        function sum(...numbers) {
+  return numbers.reduce((total, num) => total + num, 0);
+}
 
-// Sorting the array of strings in alphabetical order
-fruits.sort();
-
-console.log(fruits); // Output will be: ['Apple', 'Banana', 'Grapes', 'Orange']
+console.log(sum(1, 2)); 
+console.log(sum(1, 2, 3)); 
+console.log(sum(1, 2, 3, 4)); 
     </script>
 </body>
 </html>

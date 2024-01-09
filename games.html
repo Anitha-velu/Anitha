@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Generate a random number between 1 and 100
+const randomNumber = Math.floor(Math.random() * 100) + 1;
+let attempts = 0;
+let guessed = false;
+
+console.log('Welcome to the Number Guessing Game!');
+
+// Function to check the user's guess
+function checkGuess(userGuess) {
+  attempts++;
+
+  if (userGuess === randomNumber) {
+    console.log(`Congratulations! You guessed the number ${randomNumber} correctly in ${attempts} attempts.`);
+    guessed = true;
+  } else if (userGuess < randomNumber) {
+    console.log('Try a higher number.');
+  } else {
+    console.log('Try a lower number.');
+  }
+}
+
+// Game loop
+while (!guessed) {
+  // Get user input
+  const userInput = prompt('Guess a number between 1 and 100:');
+  
+  // Check if the user cancels or inputs nothing
+  if (userInput === null || userInput.trim() === '') {
+    console.log('Please enter a valid number.');
+    continue;
+  }
+
+  // Parse user input as a number
+  const userNumber = parseInt(userInput);
+
+  // Check if the input is a valid number
+  if (isNaN(userNumber) || userNumber < 1 || userNumber > 100) {
+    console.log('Please enter a valid number between 1 and 100.');
+    continue;
+  }
+
+  // Check the user's guess
+  checkGuess(userNumber);
+}
+</script>
+</body>
+</html>

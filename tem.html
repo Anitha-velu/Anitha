@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function celsiusToFahrenheit(celsius) {
+        return (celsius * 9/5) + 32;
+      }
+      
+      function fahrenheitToCelsius(fahrenheit) {
+        return (fahrenheit - 32) * 5/9;
+      }
+      
+      function temperatureConversion() {
+        const choice = prompt('Enter 1 to convert Celsius to Fahrenheit\nEnter 2 to convert Fahrenheit to Celsius');
+      
+        if (choice === '1') {
+          const celsius = parseFloat(prompt('Enter temperature in Celsius:'));
+          if (!isNaN(celsius)) {
+            const fahrenheit = celsiusToFahrenheit(celsius);
+            console.log(`${celsius}°C is equal to ${fahrenheit}°F`);
+          } else {
+            console.log('Please enter a valid number for Celsius.');
+          }
+        } else if (choice === '2') {
+          const fahrenheit = parseFloat(prompt('Enter temperature in Fahrenheit:'));
+          if (!isNaN(fahrenheit)) {
+            const celsius = fahrenheitToCelsius(fahrenheit);
+            console.log(`${fahrenheit}°F is equal to ${celsius}°C`);
+          } else {
+            console.log('Please enter a valid number for Fahrenheit.');
+          }
+        } else {
+          console.log('Invalid choice. Please enter either 1 or 2.');
+        }
+      }
+      
+      // Call the function to start the temperature conversion
+      temperatureConversion();
+    </script>
+</body>
+</html>
